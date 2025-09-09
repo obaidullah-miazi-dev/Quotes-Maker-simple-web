@@ -8,8 +8,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="bg-[#0c0018] p-20">
+    <section class="w-10/12 mx-auto h-full rounded-xl bg-white p-10 flex justify-between items-center gap-8">
+        <div class="flex-1">
 
+            <h1 class="text-2xl font-bold">Create a Quote</h1>
+            <p class="my-3 font-semibold text-gray-500">Add an image and your favorite quote to get started.</p>
+            <div
+                class="border-gray-100 border-2 w-full rounded-xl flex justify-center items-center py-20 cursor-pointer text-center hover:bg-gray-100 transition-colors duration-300">
+                <input type="file" class="hidden" id="image-input" accept="image/*">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-400 mb-2" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L15 16m-2-4l-4 4m6 4h2a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+                </svg>
+                <p class="text-gray-500 font-semibold">click to upload</p>
+            </div>
+
+            <p class="font-semibold my-2 mt-5">Quote Text :</p>
+            <textarea rows="5" class="border-2 border-gray-200 w-full rounded-xl p-3" id=""
+                placeholder="Type your inspiring quote here..."></textarea>
+
+            <button id="download-btn"
+                class="w-full mt-6 py-3 px-6 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                Download Image
+            </button>
+        </div>
+
+        <div class="flex-1">
+            <div class="w-full relative">
+                <img class="rounded-xl" src="asset/hermansyah-7uXn7nudorc-unsplash.jpg" alt="">
+                <div class="absolute inset-0 bg-[#00000062]  rounded-xl 
+              flex items-center justify-center">
+                    <h1 class="text-white text-4xl font-bold text-center px-20">Hello World</h1>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 
