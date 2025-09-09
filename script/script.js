@@ -33,9 +33,13 @@ createBtn.addEventListener('click', (e) => {
 
     const imgUrl = URL.createObjectURL(file);
     // console.log(file)
-    resultContainer.innerHTML = `
+    resultContainer.innerHTML=`
+    <div class="skeleton h-96 w-96 mx-auto"></div>
+    `
+    setTimeout(() => {
+        resultContainer.innerHTML = `
      <div id="preview" class="w-full h-full relative">
-                <img id="image" class="rounded-xl" src="${imgUrl}" alt="">
+                <img id="image"  src="${imgUrl}" alt="">
                 <div class="absolute inset-0 bg-[#00000062]  rounded-xl 
               flex items-center justify-center">
                     <h1 class="text-white text-4xl font-bold text-center px-20">${quoteText.value}</h1>
@@ -47,6 +51,7 @@ createBtn.addEventListener('click', (e) => {
                 Download Image
             </button>
     `
+    }, 3000);
 
     const downloadBtn = document.getElementById('download-btn');
     const preview = document.getElementById('preview');
