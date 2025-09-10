@@ -33,7 +33,7 @@ createBtn.addEventListener('click', (e) => {
 
     const imgUrl = URL.createObjectURL(file);
     
-    resultContainer.innerHTML = `<div class="skeleton h-96 w-full mx-auto bg-gray-200 rounded-xl animate-pulse"></div>`;
+    resultContainer.innerHTML = `<div class="skeleton md:h-96 md:w-full w-62 h-62 mx-auto bg-gray-200 rounded-xl animate-pulse"></div>`;
 
     setTimeout(() => {
         resultContainer.innerHTML = `
