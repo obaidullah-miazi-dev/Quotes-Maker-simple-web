@@ -33,7 +33,7 @@ createBtn.addEventListener('click', (e) => {
 
     const imgUrl = URL.createObjectURL(file);
     // console.log(file)
-    resultContainer.innerHTML=`
+    resultContainer.innerHTML = `
     <div class="skeleton h-96 w-96 mx-auto"></div>
     `
     setTimeout(() => {
@@ -51,19 +51,22 @@ createBtn.addEventListener('click', (e) => {
                 Download Image
             </button>
     `
+
+        const downloadBtn = document.getElementById('download-btn');
+        const preview = document.getElementById('preview');
+
+        downloadBtn.addEventListener('click', () => {
+            html2canvas(preview).then(canvas => {
+                const link = document.createElement('a');
+                link.href = canvas.toDataURL("image/png");
+                link.download = "quote-image.png";
+                link.click();
+            });
+        });
+        
     }, 3000);
 
-    const downloadBtn = document.getElementById('download-btn');
-    const preview = document.getElementById('preview');
 
-    downloadBtn.addEventListener('click', () => {
-        html2canvas(preview).then(canvas => {
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL("image/png");
-            link.download = "quote-image.png";
-            link.click();
-        });
-    });
 })
 
 
