@@ -32,15 +32,14 @@ createBtn.addEventListener('click', (e) => {
     }
 
     const imgUrl = URL.createObjectURL(file);
-    // console.log(file)
-    resultContainer.innerHTML = `
-    <div class="skeleton h-96 w-96 mx-auto"></div>
-    `
+    
+    resultContainer.innerHTML = `<div class="skeleton h-96 w-full mx-auto bg-gray-200 rounded-xl animate-pulse"></div>`;
+
     setTimeout(() => {
         resultContainer.innerHTML = `
      <div id="preview" class="w-full h-full relative">
                 <img id="image"  src="${imgUrl}" alt="">
-                <div class="absolute inset-0 bg-[#00000062]  rounded-xl 
+                <div class="absolute inset-0 bg-[#00000062]
               flex items-center justify-center">
                     <h1 class="text-white text-4xl font-bold text-center px-20">${quoteText.value}</h1>
                 </div>
